@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl:"https://localhost:44373/"
+  apiUrl:"http://catstagram001.azurewebsites.net/"
 };
 
 /*
