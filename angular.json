@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Catstagram"
+  "defaultProject": "Catstagram",
+  "cli": {
+    "analytics": "cab3512d-12bb-48de-970b-1a4b5d6aa331"
+  }
 }
