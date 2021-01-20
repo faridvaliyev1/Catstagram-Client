@@ -8,14 +8,15 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent implements OnInit {
   
   registerForm:FormGroup
   constructor(private fb:FormBuilder, private authService:AuthService) {
     this.registerForm=this.fb.group({
       "username":['',[Validators.required]],
-      "password":["",[Validators.required]],
-      "email":["",[Validators.required]]
+      "password":['',[Validators.required]],
+      "email":['',[Validators.required]]
     })
    }
 
