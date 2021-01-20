@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {environment}  from '../../environments/environment';
+import { ThrowStmt } from '@angular/compiler';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,5 +24,15 @@ export class AuthService {
 
   getToken(){
     return localStorage.getItem('token');
+  }
+  isAuthentificated(){
+    if(this.getToken())
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
 }
