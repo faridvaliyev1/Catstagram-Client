@@ -13,8 +13,10 @@ export class CatService {
   constructor(private http:HttpClient,private authService:AuthService) { }
 
   create(data): Observable<ICat>{
-    let headers=new HttpHeaders();
-    headers=headers.set('Authorization','Bearer '+this.authService.getToken());
-    return this.http.post<ICat>(this.catPath,data,{headers})
+    return this.http.post<ICat>(this.catPath,data)
+  }
+
+  getCats(): Observable<Array<ICat>>{
+    return this.http.get<Array<ICat>>(this.catPath)
   }
 }
